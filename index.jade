@@ -1,7 +1,7 @@
 doctype html
 head
     meta(charset="UTF-8")
-    title("Postertron")
+    title("Semantic Poster Search")
 
     // Vendor styles
     link(rel="stylesheet" href="public/styles/bootstrap_superhero_theme/superhero_theme.css")
@@ -9,6 +9,8 @@ head
     // Vendor scripts
     script(src="https://code.jquery.com/jquery-3.1.1.min.js", integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+
+    script(src="public/scripts/functions.js")
 
 body
     .container
@@ -20,13 +22,25 @@ body
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href="#") Brand
+                    a.navbar-brand(href="#") Semantic Poster Search
 
                 .collapse.navbar-collapse#bs-example-navbar-collapse-1
                     ul.nav.navbar-nav
                         li.active
-                            a(href="#") Link
+                            a(href="#") About
 
         main
-            h1 Søk etter filmer
-            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam ipsum, non sint rerum corrupti quos, facere earum, ab distinctio necessitatibus sit incidunt at tempora similique. Quaerat deleniti voluptatum tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, excepturi, ad! Placeat facilis, numquam praesentium. Hic, itaque veritatis harum mollitia, delectus labore animi, sunt accusantium nostrum dolor qui deserunt maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi obcaecati iusto veniam, quos illum itaque nihil maxime quia nulla cum aut sit officia sapiente distinctio quas molestiae libero! Aspernatur, ut!
+            .jumbotron
+                h1 Semantic Poster Search
+                p This page lets you search for your favourite movies. When a search is found, it returns movie posters for that particular movie, as well as movie and director data from <a href="http://wiki.dbpedia.org/">DBpedia</a>.
+
+            h2 Go ahead and search for your favourite movie
+            form(action="#")
+                .form-group
+                    input(type="text" name="nameSearch" id="nameSearch" placeholder="Search for name of movie").form-control
+                .form-group
+                    button#searchBtn.btn.btn-success.form-control SEARCH
+
+
+            
+

@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
-  <title Postertron></title>
+  <title Semantic Poster Search></title>
   <!-- Vendor styles-->
   <link rel="stylesheet" href="public/styles/bootstrap_superhero_theme/superhero_theme.css">
   <!-- Vendor scripts-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="public/scripts/functions.js"></script>
 </head>
 <body>
   <div class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Brand</a>
+          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Semantic Poster Search</a>
         </div>
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
+            <li class="active"><a href="#">About</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <h1>Søk etter filmer</h1>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsam ipsum, non sint rerum corrupti quos, facere earum, ab distinctio necessitatibus sit incidunt at tempora similique. Quaerat deleniti voluptatum tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, excepturi, ad! Placeat facilis, numquam praesentium. Hic, itaque veritatis harum mollitia, delectus labore animi, sunt accusantium nostrum dolor qui deserunt maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi obcaecati iusto veniam, quos illum itaque nihil maxime quia nulla cum aut sit officia sapiente distinctio quas molestiae libero! Aspernatur, ut!</p>
+      <div class="jumbotron">
+        <h1>Semantic Poster Search</h1>
+        <p>This page lets you search for your favourite movies. When a search is found, it returns movie posters for that particular movie, as well as movie and director data from <a href="http://wiki.dbpedia.org/">DBpedia</a>.</p>
+      </div>
+      <h2>Go ahead and search for your favourite movie</h2>
+      <form action="#">
+        <div class="form-group">
+          <input type="text" name="nameSearch" id="nameSearch" placeholder="Search for name of movie" class="form-control">
+        </div>
+        <div class="form-group">
+          <button id="searchBtn" class="btn btn-success form-control">SEARCH</button>
+        </div>
+      </form>
     </main>
   </div>
 </body>
