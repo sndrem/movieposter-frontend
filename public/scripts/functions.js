@@ -10,6 +10,13 @@ const format = "&format=json";
 // var countryNameUrl = endpoint + "?query=" + encodeURIComponent(countryNameQuery) + "&format=json";
 
 
+function Poster(title, caption, year, urls, largePosterUrl) {
+    this.title = title;
+    this.caption = caption;
+    this.year = year;
+    this.urls = urls;
+    this.largePosterUrl = largePosterUrl;
+}
 
 $(function() {
     var app = {
@@ -44,28 +51,20 @@ $(function() {
             });
         },
         populateData: function(data) {
-            console.log(data);
             var results = data.results.bindings;
+            var poster = null;
             if(results.length == 0) {
                 $("legend").html("No results for " + $("#nameSearch").val());
-            } else if (results.length == 1) {
+            } else if (results.length > 0) {
                 const posterData = results[0];
                 const title = posterData.name.value;
                 const caption = posterData.caption.value;
-                const posterUrl = posterData.url.value;
-                var image = createImageTag(posterUrl, title);
-                $(".posters").append(image);
+                const posterUrls = getPosterUrls(results);
+                const year = posterData.year.value;
+                poster = new Poster(title, caption, year, posterUrls, null);
+
+                appendImages(poster.urls);
                 $(".posterData").append("<h1>" + caption + "</h1>")
-            } else {
-                for(var i = 0; i < results.length; i++) {
-                    var posterData = results[i];
-                    const title = posterData.name.value;
-                    const posterUrl = posterData.url.value;
-                    const caption = posterData.caption.value;
-                    var image = createImageTag(posterUrl, title);
-                    $(".posters").append(image);
-                    $(".posterData").html("<h1>" + caption + "</h1>")
-                }
             }
         }
     };
@@ -73,7 +72,28 @@ $(function() {
     app.searchBtnClick();
 
     // Helper methods
+
+    // Method to append all image urls to the site
+    function appendImages(posterUrls) {
+        var $imageSection = $(".posters");
+        for(var i = 0; i < posterUrls.length; i++) {
+            var url = posterUrls[i];
+            var image = createImageTag(url, null);
+            $imageSection.append(image);
+        }
+    }
+
+    // Returns an image tag
     function createImageTag(posterUrl, altText) {
         return "<img class='img-responsive' src=\"" + posterUrl + "\" alt=\"" + altText + "\">";;
+    }
+
+    // Fetches all urls for a given poster
+    function getPosterUrls(posterData) {
+        var urls = [];
+        for(var i = 0; i < posterData.length; i++) {
+            urls.push(posterData[i].url.value);
+        }
+        return urls;
     }
 });
