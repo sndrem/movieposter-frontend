@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Vendor styles-->
   <link rel="stylesheet" href="public/styles/bootstrap_superhero_theme/superhero_theme.css">
+  <link rel="stylesheet" href="public/styles/style.css">
   <!-- Vendor scripts-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,6 +41,17 @@
         </div>
       </form>
       <section class="results">
+        <table class="multipleHitTable table table-striped hide">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Caption</th>
+              <th>Year</th>
+              <th>Poster url</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6 col-xl-4 posterData"></div>
           <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6 col-xl-4 posters"></div>

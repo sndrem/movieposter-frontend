@@ -34,16 +34,22 @@ $(function() {
                 } else {
                     // Search is not empty, proceed to check for data in the triple store
                     var nameQuery = prefixes
-                                  + "SELECT DISTINCT ?name ?year ?url ?caption "
+                                  + "SELECT ?name ?year ?url ?caption "
                                   + "WHERE { ?poster a poster:poster; "
-                                                + " poster:title " + "\"" + search + "\"; "
+                                                + " poster:title ?name; "
                                                 + " rdfs:label ?name; "
                                                 + " poster:year ?year; "
                                                 + " poster:caption ?caption; "
-                                                + " poster:posterUrl ?url . }";
+                                                + " poster:posterUrl ?url . "
+                                                + " FILTER(strStarts(?name, \"" + search + "\"))} "
+                                                + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
                     $.get(nameQueryUrl, function(data) {
-                        app.populateData(data);
+                        if(data.results.bindings.length > 0) {
+                            app.showMultipleHitList(data.results.bindings);
+                            addClickEventsToTableRows();
+                        }
+                        // app.populateData(data);
                         /*optional stuff to do after success */
                     });
 
@@ -66,6 +72,24 @@ $(function() {
                 appendImages(poster.urls);
                 $(".posterData").append("<h1>" + caption + "</h1>")
             }
+        },
+
+        showMultipleHitList: function(multipleHits) {
+            $("legend").html("There was multiple hits for " + $("#nameSearch").val());
+            $("legend").append("<p>Select your desired poster from the list</p>");
+            var $results = $(".results");
+            $(".multipleHitTable").removeClass('hide');
+            var $tableBody = $(".multipleHitTable tbody");
+            $.each(multipleHits, function(index, val) {
+                 /* iterate through array or object */
+                 console.log(val);
+                 $tableBody.append("<tr>"
+                                + "<td>" + val.name.value + "</td>"
+                                + "<td>" + val.caption.value + "</td>"
+                                + "<td>" + val.year.value + "</td>"
+                                + "<td><a href=\"" + val.url.value + "\">" + val.url.value + "</a></td>"
+                                + "</tr>");
+            });
         }
     };
 
@@ -95,5 +119,12 @@ $(function() {
             urls.push(posterData[i].url.value);
         }
         return urls;
+    }
+
+    function addClickEventsToTableRows() {
+        $("tbody tr").on('click', function(event) {
+            event.preventDefault();
+            alert("Hello");
+        });
     }
 });

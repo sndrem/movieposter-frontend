@@ -6,6 +6,7 @@ head
 
     // Vendor styles
     link(rel="stylesheet" href="public/styles/bootstrap_superhero_theme/superhero_theme.css")
+    link(rel="stylesheet" href="public/styles/style.css")
 
     // Vendor scripts
     script(src="https://code.jquery.com/jquery-3.1.1.min.js", integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin="anonymous")
@@ -45,6 +46,15 @@ body
 
 
             section.results
+                table.multipleHitTable.table.table-striped.hide
+                    thead
+                        tr
+                            th Name
+                            th Caption
+                            th Year
+                            th Poster url
+                    tbody
+
                 .row
                     .col-xs-12.col-sm-8.col-md-8.col-lg-6.col-xl-4.posterData
 
