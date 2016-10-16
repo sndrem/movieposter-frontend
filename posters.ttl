@@ -1,0 +1,925 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix poster: <http://uib.no/info310/movieOntology#> .
+
+poster:The_Offering  a         poster:poster ;
+        rdfs:label             "The Offering" ;
+        poster:caption         "The Offering (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/offering_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/offering_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/offering.jpg" , "http://www.impawards.com/2016/posters/offering_ver2.jpg" ;
+        poster:title           "The Offering" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Offering" .
+
+poster:Avas_Impossible_Things
+        a                      poster:poster ;
+        rdfs:label             "Ava's Impossible Things" ;
+        poster:caption         "Ava's Impossible Things (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/avas_impossible_things_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/avas_impossible_things.jpg" ;
+        poster:title           "Ava's Impossible Things" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ava%27s_Impossible_Things" .
+
+poster:The_Land  a             poster:poster ;
+        rdfs:label             "The Land" ;
+        poster:caption         "The Land (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/land_xlg.jpg" , "http://www.impawards.com/2016/posters/land_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/land.jpg" , "http://www.impawards.com/2016/posters/land_ver2.jpg" ;
+        poster:title           "The Land" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Land" .
+
+poster:I_Saw_the_Light
+        a                      poster:poster ;
+        rdfs:label             "I Saw the Light" ;
+        poster:caption         "I Saw the Light (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/i_saw_the_light_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/i_saw_the_light.jpg" ;
+        poster:title           "I Saw the Light" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/I_Saw_the_Light" .
+
+poster:Bad_Hurt  a             poster:poster ;
+        rdfs:label             "Bad Hurt" ;
+        poster:caption         "Bad Hurt (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/bad_hurt_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/bad_hurt.jpg" , "http://www.impawards.com/2016/posters/bad_hurt_ver2.jpg" ;
+        poster:title           "Bad Hurt" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Bad_Hurt" .
+
+poster:Lovesong  a             poster:poster ;
+        rdfs:label             "Lovesong" ;
+        poster:caption         "Lovesong (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/lovesong_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/lovesong.jpg" ;
+        poster:title           "Lovesong" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Lovesong" .
+
+poster:Jackie  a               poster:poster ;
+        rdfs:label             "Jackie" ;
+        poster:caption         "Jackie (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/jackie_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/jackie.jpg" ;
+        poster:title           "Jackie" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Jackie" .
+
+poster:After_Spring  a         poster:poster ;
+        rdfs:label             "After Spring" ;
+        poster:caption         "After Spring (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/after_spring_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/after_spring_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/after_spring_ver2.jpg" , "http://www.impawards.com/2016/posters/after_spring.jpg" ;
+        poster:title           "After Spring" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/After_Spring" .
+
+poster:Lo_and_Behold__Reveries_of_the_Connected_World
+        a                      poster:poster ;
+        rdfs:label             "Lo and Behold, Reveries of the Connected World" ;
+        poster:caption         "Lo and Behold, Reveries of the Connected World (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_xlg.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver2.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver3.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world_ver4.jpg" , "http://www.impawards.com/2016/posters/lo_and_behold_reveries_of_the_connected_world.jpg" ;
+        poster:title           "Lo and Behold, Reveries of the Connected World" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Lo_and_Behold%2C_Reveries_of_the_Connected_World" .
+
+poster:Darling  a              poster:poster ;
+        rdfs:label             "Darling" ;
+        poster:caption         "Darling (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/darling_xlg.jpg" , "http://www.impawards.com/2016/posters/darling_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/darling.jpg" , "http://www.impawards.com/2016/posters/darling_ver2.jpg" ;
+        poster:title           "Darling" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Darling" .
+
+poster:Kung_Fu_Panda_3
+        a                      poster:poster ;
+        rdfs:label             "Kung Fu Panda 3" ;
+        poster:caption         "Kung Fu Panda 3 (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver9_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver14_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver11_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver12_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver7_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver10_xlg.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver8_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver10.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver9.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver11.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver8.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver14.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver13.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver12.jpg" , "http://www.impawards.com/2016/posters/kung_fu_panda_three_ver7.jpg" ;
+        poster:title           "Kung Fu Panda 3" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Kung_Fu_Panda_3" .
+
+poster:Hacksaw_Ridge  a        poster:poster ;
+        rdfs:label             "Hacksaw Ridge" ;
+        poster:caption         "Hacksaw Ridge (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/hacksaw_ridge_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/hacksaw_ridge_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/hacksaw_ridge.jpg" , "http://www.impawards.com/2016/posters/hacksaw_ridge_ver2.jpg" ;
+        poster:title           "Hacksaw Ridge" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Hacksaw_Ridge" .
+
+poster:Get_a_Job  a            poster:poster ;
+        rdfs:label             "Get a Job" ;
+        poster:caption         "Get a Job (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/get_a_job_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/get_a_job.jpg" ;
+        poster:title           "Get a Job" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Get_a_Job" .
+
+poster:It_Had_to_Be_You
+        a                 poster:poster ;
+        rdfs:label        "It Had to Be You" ;
+        poster:caption    "It Had to Be You (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/it_had_to_be_you.jpg" ;
+        poster:title      "It Had to Be You" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/It_Had_to_Be_You" .
+
+poster:Bad_Moms  a             poster:poster ;
+        rdfs:label             "Bad Moms" ;
+        poster:caption         "Bad Moms (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/bad_moms_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/bad_moms_xlg.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver5_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/bad_moms_ver5.jpg" , "http://www.impawards.com/2016/posters/bad_moms.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver4.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver3.jpg" , "http://www.impawards.com/2016/posters/bad_moms_ver2.jpg" ;
+        poster:title           "Bad Moms" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Bad_Moms" .
+
+poster:Ouija_2  a              poster:poster ;
+        rdfs:label             "Ouija 2" ;
+        poster:caption         "Ouija 2 (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/ouija_two_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/ouija_two_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/ouija_two_ver3.jpg" , "http://www.impawards.com/2016/posters/ouija_two_ver4.jpg" ;
+        poster:title           "Ouija 2" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ouija_2" .
+
+poster:Exposed  a         poster:poster ;
+        rdfs:label        "Exposed" ;
+        poster:caption    "Exposed (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/exposed.jpg" , "http://www.impawards.com/2016/posters/exposed_ver2.jpg" ;
+        poster:title      "Exposed" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Exposed" .
+
+poster:Dancer  a               poster:poster ;
+        rdfs:label             "Dancer" ;
+        poster:caption         "Dancer (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/dancer_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/dancer_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/dancer_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/dancer.jpg" , "http://www.impawards.com/2016/posters/dancer_ver3.jpg" , "http://www.impawards.com/2016/posters/dancer_ver2.jpg" ;
+        poster:title           "Dancer" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Dancer" .
+
+poster:Cabin_Fever  a          poster:poster ;
+        rdfs:label             "Cabin Fever" ;
+        poster:caption         "Cabin Fever (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/cabin_fever_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_xlg.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver5_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/cabin_fever.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver4.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver2.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver3.jpg" , "http://www.impawards.com/2016/posters/cabin_fever_ver5.jpg" ;
+        poster:title           "Cabin Fever" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Cabin_Fever" .
+
+poster:poster_url  a  owl:DatatypeProperty , owl:InverseFunctionalProperty , owl:FunctionalProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:string .
+
+poster:Jackrabbit  a           poster:poster ;
+        rdfs:label             "Jackrabbit" ;
+        poster:caption         "Jackrabbit (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/jackrabbit_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/jackrabbit.jpg" ;
+        poster:title           "Jackrabbit" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Jackrabbit" .
+
+poster:Paterson  a             poster:poster ;
+        rdfs:label             "Paterson" ;
+        poster:caption         "Paterson (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/paterson_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/paterson_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/paterson_ver2.jpg" , "http://www.impawards.com/2016/posters/paterson.jpg" ;
+        poster:title           "Paterson" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Paterson" .
+
+poster:Parenthèse  a      poster:poster ;
+        rdfs:label        "Parenthèse" ;
+        poster:caption    "Parenthèse (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/parenthese.jpg" ;
+        poster:title      "Parenthèse" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Parenth%C3%A8se" .
+
+poster:Autumn_Lights  a        poster:poster ;
+        rdfs:label             "Autumn Lights" ;
+        poster:caption         "Autumn Lights (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/autumn_lights_xlg.jpg" , "http://www.impawards.com/2016/posters/autumn_lights_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/autumn_lights_ver2.jpg" , "http://www.impawards.com/2016/posters/autumn_lights.jpg" ;
+        poster:title           "Autumn Lights" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Autumn_Lights" .
+
+poster:Abattoir  a             poster:poster ;
+        rdfs:label             "Abattoir" ;
+        poster:caption         "Abattoir (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/abattoir_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/abattoir_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/abattoir_ver2.jpg" , "http://www.impawards.com/2016/posters/abattoir_ver3.jpg" , "http://www.impawards.com/2016/posters/abattoir.jpg" ;
+        poster:title           "Abattoir" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Abattoir" .
+
+poster:title  a      owl:DatatypeProperty , owl:FunctionalProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:string .
+
+poster:My_Blind_Brother
+        a                      poster:poster ;
+        rdfs:label             "My Blind Brother" ;
+        poster:caption         "My Blind Brother (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/my_blind_brother_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/my_blind_brother.jpg" ;
+        poster:title           "My Blind Brother" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/My_Blind_Brother" .
+
+poster:Aarons_Blood  a         poster:poster ;
+        rdfs:label             "Aaron's Blood" ;
+        poster:caption         "Aaron's Blood (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/aarons_blood_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/aarons_blood.jpg" ;
+        poster:title           "Aaron's Blood" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Aaron%27s_Blood" .
+
+poster:Ghostbusters  a         poster:poster ;
+        rdfs:label             "Ghostbusters" ;
+        poster:caption         "Ghostbusters (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/ghostbusters_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/ghostbusters_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/ghostbusters_ver2.jpg" , "http://www.impawards.com/2016/posters/ghostbusters.jpg" ;
+        poster:title           "Ghostbusters" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ghostbusters" .
+
+<http://uib.no/info310/movieOntology#Naledi:_A_Baby_Elephants_Tale>
+        a                      poster:poster ;
+        rdfs:label             "Naledi: A Baby Elephant's Tale" ;
+        poster:caption         "Naledi: A Baby Elephant's Tale (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/naledi_a_baby_elephants_tale_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/naledi_a_baby_elephants_tale.jpg" ;
+        poster:title           "Naledi: A Baby Elephant's Tale" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Naledi%3A_A_Baby_Elephant%27s_Tale" .
+
+<http://uib.no/info310/movieOntology#Jack_Reacher:_Never_Go_Back>
+        a                      poster:poster ;
+        rdfs:label             "Jack Reacher: Never Go Back" ;
+        poster:caption         "Jack Reacher: Never Go Back (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_xlg.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver3.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver2.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back_ver4.jpg" , "http://www.impawards.com/2016/posters/jack_reacher_never_go_back.jpg" ;
+        poster:title           "Jack Reacher: Never Go Back" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Jack_Reacher%3A_Never_Go_Back" .
+
+poster:Half-Life  a            poster:poster ;
+        rdfs:label             "Half-Life" ;
+        poster:caption         "Half-Life (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/halflife_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/halflife.jpg" ;
+        poster:title           "Half-Life" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Half-Life" .
+
+poster:posterUrl  a  owl:DatatypeProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:string .
+
+poster:Karate_Kill  a          poster:poster ;
+        rdfs:label             "Karate Kill" ;
+        poster:caption         "Karate Kill (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/karate_kill_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/karate_kill.jpg" ;
+        poster:title           "Karate Kill" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Karate_Kill" .
+
+poster:Lace_Crater  a          poster:poster ;
+        rdfs:label             "Lace Crater" ;
+        poster:caption         "Lace Crater (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/lace_crater_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/lace_crater.jpg" ;
+        poster:title           "Lace Crater" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Lace_Crater" .
+
+poster:The_Love_Witch
+        a                      poster:poster ;
+        rdfs:label             "The Love Witch" ;
+        poster:caption         "The Love Witch (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/love_witch_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/love_witch.jpg" ;
+        poster:title           "The Love Witch" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Love_Witch" .
+
+poster:Now_You_See_Me_2
+        a                      poster:poster ;
+        rdfs:label             "Now You See Me 2" ;
+        poster:caption         "Now You See Me 2 (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/now_you_see_me_two_ver26_xlg.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver23_xlg.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver22_xlg.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver24_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/now_you_see_me_two_ver25.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver26.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver22.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver24.jpg" , "http://www.impawards.com/2016/posters/now_you_see_me_two_ver23.jpg" ;
+        poster:title           "Now You See Me 2" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Now_You_See_Me_2" .
+
+poster:largePosterUrl
+        a            owl:DatatypeProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:string .
+
+poster:Keanu  a                poster:poster ;
+        rdfs:label             "Keanu" ;
+        poster:caption         "Keanu (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/keanu_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_ver7_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_ver5_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/keanu_ver6_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/keanu_ver4.jpg" , "http://www.impawards.com/2016/posters/keanu_ver3.jpg" , "http://www.impawards.com/2016/posters/keanu_ver2.jpg" , "http://www.impawards.com/2016/posters/keanu_ver7.jpg" , "http://www.impawards.com/2016/posters/keanu_ver6.jpg" , "http://www.impawards.com/2016/posters/keanu.jpg" , "http://www.impawards.com/2016/posters/keanu_ver5.jpg" ;
+        poster:title           "Keanu" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Keanu" .
+
+poster:Do_Not_Resist  a        poster:poster ;
+        rdfs:label             "Do Not Resist" ;
+        poster:caption         "Do Not Resist (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/do_not_resist_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/do_not_resist.jpg" ;
+        poster:title           "Do Not Resist" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Do_Not_Resist" .
+
+poster:Hush  a                 poster:poster ;
+        rdfs:label             "Hush" ;
+        poster:caption         "Hush (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/hush_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/hush.jpg" ;
+        poster:title           "Hush" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Hush" .
+
+poster:The_Neighbor  a         poster:poster ;
+        rdfs:label             "The Neighbor" ;
+        poster:caption         "The Neighbor (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/neighbor_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/neighbor.jpg" ;
+        poster:title           "The Neighbor" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Neighbor" .
+
+poster:Adam_K  a          poster:poster ;
+        rdfs:label        "Adam K" ;
+        poster:caption    "Adam K (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/adam_k.jpg" ;
+        poster:title      "Adam K" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Adam_K" .
+
+poster:Jack_Goes_Home
+        a                      poster:poster ;
+        rdfs:label             "Jack Goes Home" ;
+        poster:caption         "Jack Goes Home (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/jack_goes_home_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/jack_goes_home.jpg" ;
+        poster:title           "Jack Goes Home" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Jack_Goes_Home" .
+
+poster:Outlaws_and_Angels
+        a                      poster:poster ;
+        rdfs:label             "Outlaws and Angels" ;
+        poster:caption         "Outlaws and Angels (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/outlaws_and_angels_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/outlaws_and_angels.jpg" ;
+        poster:title           "Outlaws and Angels" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Outlaws_and_Angels" .
+
+poster:My_Big_Fat_Greek_Wedding_2
+        a                      poster:poster ;
+        rdfs:label             "My Big Fat Greek Wedding 2" ;
+        poster:caption         "My Big Fat Greek Wedding 2 (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver5_xlg.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver6_xlg.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver4_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver6.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver3.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver4.jpg" , "http://www.impawards.com/2016/posters/my_big_fat_greek_wedding_two_ver5.jpg" ;
+        poster:title           "My Big Fat Greek Wedding 2" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/My_Big_Fat_Greek_Wedding_2" .
+
+poster:The_Accountant
+        a                      poster:poster ;
+        rdfs:label             "The Accountant" ;
+        poster:caption         "The Accountant (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/accountant_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/accountant_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/accountant_ver3.jpg" , "http://www.impawards.com/2016/posters/accountant_ver2.jpg" , "http://www.impawards.com/2016/posters/accountant.jpg" ;
+        poster:title           "The Accountant" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Accountant" .
+
+poster:Everybody_Wants_Some
+        a                      poster:poster ;
+        rdfs:label             "Everybody Wants Some" ;
+        poster:caption         "Everybody Wants Some (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/everybody_wants_some_ver5_xlg.jpg" , "http://www.impawards.com/2016/posters/everybody_wants_some_ver6_xlg.jpg" , "http://www.impawards.com/2016/posters/everybody_wants_some_ver4_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/everybody_wants_some_ver4.jpg" , "http://www.impawards.com/2016/posters/everybody_wants_some_ver6.jpg" , "http://www.impawards.com/2016/posters/everybody_wants_some_ver5.jpg" ;
+        poster:title           "Everybody Wants Some" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Everybody_Wants_Some" .
+
+poster:The_Garden  a           poster:poster ;
+        rdfs:label             "The Garden" ;
+        poster:caption         "The Garden (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/garden_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/garden.jpg" ;
+        poster:title           "The Garden" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Garden" .
+
+poster:Dont_Breathe  a         poster:poster ;
+        rdfs:label             "Don't Breathe" ;
+        poster:caption         "Don't Breathe (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/dont_breathe_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/dont_breathe_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/dont_breathe_ver5_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/dont_breathe_ver4.jpg" , "http://www.impawards.com/2016/posters/dont_breathe_ver3.jpg" , "http://www.impawards.com/2016/posters/dont_breathe_ver5.jpg" ;
+        poster:title           "Don't Breathe" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Don%27t_Breathe" .
+
+poster:Mad  a                  poster:poster ;
+        rdfs:label             "Mad" ;
+        poster:caption         "Mad (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/mad_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/mad.jpg" ;
+        poster:title           "Mad" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Mad" .
+
+poster:Lamb  a                 poster:poster ;
+        rdfs:label             "Lamb" ;
+        poster:caption         "Lamb (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/lamb_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/lamb.jpg" ;
+        poster:title           "Lamb" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Lamb" .
+
+poster:Patriots_Day  a         poster:poster ;
+        rdfs:label             "Patriots Day" ;
+        poster:caption         "Patriots Day (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/patriots_day_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/patriots_day.jpg" ;
+        poster:title           "Patriots Day" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Patriots_Day" .
+
+poster:Kate_Plays_Christine
+        a                 poster:poster ;
+        rdfs:label        "Kate Plays Christine" ;
+        poster:caption    "Kate Plays Christine (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/kate_plays_christine.jpg" ;
+        poster:title      "Kate Plays Christine" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Kate_Plays_Christine" .
+
+poster:The_Darkness  a         poster:poster ;
+        rdfs:label             "The Darkness" ;
+        poster:caption         "The Darkness (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/darkness_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/darkness.jpg" ;
+        poster:title           "The Darkness" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Darkness" .
+
+poster:Passengers  a           poster:poster ;
+        rdfs:label             "Passengers" ;
+        poster:caption         "Passengers (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/passengers_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/passengers.jpg" ;
+        poster:title           "Passengers" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Passengers" .
+
+poster:Pushing_Dead  a    poster:poster ;
+        rdfs:label        "Pushing Dead" ;
+        poster:caption    "Pushing Dead (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/pushing_dead.jpg" ;
+        poster:title      "Pushing Dead" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Pushing_Dead" .
+
+poster:My_Scientology_Movie
+        a                      poster:poster ;
+        rdfs:label             "My Scientology Movie" ;
+        poster:caption         "My Scientology Movie (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/my_scientology_movie_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/my_scientology_movie.jpg" ;
+        poster:title           "My Scientology Movie" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/My_Scientology_Movie" .
+
+<http://uib.no/info310/movieOntology#Hail__Caesar!>
+        a                      poster:poster ;
+        rdfs:label             "Hail, Caesar!" ;
+        poster:caption         "Hail, Caesar! (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/hail_caesar_ver7_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver6_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver5_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver9_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver8_xlg.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/hail_caesar_ver6.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver5.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver3.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver2.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver7.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver8.jpg" , "http://www.impawards.com/2016/posters/hail_caesar.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver4.jpg" , "http://www.impawards.com/2016/posters/hail_caesar_ver9.jpg" ;
+        poster:title           "Hail, Caesar!" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Hail%2C_Caesar%21" .
+
+<http://uib.no/info310/movieOntology#Neighbors_2:_Sorority_Rising>
+        a                      poster:poster ;
+        rdfs:label             "Neighbors 2: Sorority Rising" ;
+        poster:caption         "Neighbors 2: Sorority Rising (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/neighbors_two_sorority_rising_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/neighbors_two_sorority_rising_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/neighbors_two_sorority_rising.jpg" , "http://www.impawards.com/2016/posters/neighbors_two_sorority_rising_ver2.jpg" , "http://www.impawards.com/2016/posters/neighbors_two_sorority_rising_ver3.jpg" ;
+        poster:title           "Neighbors 2: Sorority Rising" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Neighbors_2%3A_Sorority_Rising" .
+
+<http://uib.no/info310/movieOntology#Love_&_Friendship>
+        a                      poster:poster ;
+        rdfs:label             "Love & Friendship" ;
+        poster:caption         "Love & Friendship (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/love_and_friendship_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/love_and_friendship_ver2.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship_ver3.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship.jpg" , "http://www.impawards.com/2016/posters/love_and_friendship_ver4.jpg" ;
+        poster:title           "Love & Friendship" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Love_%26_Friendship" .
+
+poster:I_Am_Wrath  a           poster:poster ;
+        rdfs:label             "I Am Wrath" ;
+        poster:caption         "I Am Wrath (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/i_am_wrath_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/i_am_wrath.jpg" ;
+        poster:title           "I Am Wrath" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/I_Am_Wrath" .
+
+poster:The_Family_Fang
+        a                      poster:poster ;
+        rdfs:label             "The Family Fang" ;
+        poster:caption         "The Family Fang (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/family_fang_xlg.jpg" , "http://www.impawards.com/2016/posters/family_fang_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/family_fang.jpg" , "http://www.impawards.com/2016/posters/family_fang_ver2.jpg" ;
+        poster:title           "The Family Fang" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Family_Fang" .
+
+poster:Call_Her_Applebroog
+        a                 poster:poster ;
+        rdfs:label        "Call Her Applebroog" ;
+        poster:caption    "Call Her Applebroog (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/call_her_applebroog.jpg" ;
+        poster:title      "Call Her Applebroog" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Call_Her_Applebroog" .
+
+poster:Ice_Age_5  a            poster:poster ;
+        rdfs:label             "Ice Age 5" ;
+        poster:caption         "Ice Age 5 (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/ice_age_five_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver4_xlg.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver5_xlg.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/ice_age_five_ver2.jpg" , "http://www.impawards.com/2016/posters/ice_age_five.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver4.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver5.jpg" , "http://www.impawards.com/2016/posters/ice_age_five_ver3.jpg" ;
+        poster:title           "Ice Age 5" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ice_Age_5" .
+
+poster:Fantastic_Beasts_and_Where_to_Find_Them
+        a                      poster:poster ;
+        rdfs:label             "Fantastic Beasts and Where to Find Them" ;
+        poster:caption         "Fantastic Beasts and Where to Find Them (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them_ver2.jpg" , "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them_ver3.jpg" , "http://www.impawards.com/2016/posters/fantastic_beasts_and_where_to_find_them.jpg" ;
+        poster:title           "Fantastic Beasts and Where to Find Them" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Fantastic_Beasts_and_Where_to_Find_Them" .
+
+poster:poster  a  owl:Class .
+
+poster:Dwelling  a             poster:poster ;
+        rdfs:label             "Dwelling" ;
+        poster:caption         "Dwelling (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/dwelling_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/dwelling.jpg" ;
+        poster:title           "Dwelling" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Dwelling" .
+
+poster:The_Huntsman  a         poster:poster ;
+        rdfs:label             "The Huntsman" ;
+        poster:caption         "The Huntsman (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/huntsman_ver10_xlg.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver11_xlg.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver13_xlg.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver12_xlg.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver14_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/huntsman_ver11.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver12.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver13.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver14.jpg" , "http://www.impawards.com/2016/posters/huntsman_ver10.jpg" ;
+        poster:title           "The Huntsman" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Huntsman" .
+
+poster:Café_Society  a         poster:poster ;
+        rdfs:label             "Café Society" ;
+        poster:caption         "Café Society (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/cafe_society_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/cafe_society_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/cafe_society_ver3.jpg" , "http://www.impawards.com/2016/posters/cafe_society_ver4.jpg" , "http://www.impawards.com/2016/posters/cafe_society_ver2.jpg" , "http://www.impawards.com/2016/posters/cafe_society.jpg" ;
+        poster:title           "Café Society" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Caf%C3%A9_Society" .
+
+poster:The_Frontier  a         poster:poster ;
+        rdfs:label             "The Frontier" ;
+        poster:caption         "The Frontier (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/frontier_ver8_xlg.jpg" , "http://www.impawards.com/2016/posters/frontier_ver6_xlg.jpg" , "http://www.impawards.com/2016/posters/frontier_ver7_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/frontier_ver7.jpg" , "http://www.impawards.com/2016/posters/frontier_ver8.jpg" , "http://www.impawards.com/2016/posters/frontier_ver6.jpg" ;
+        poster:title           "The Frontier" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Frontier" .
+
+poster:No_Light_and_No_Land_Anywhere
+        a                      poster:poster ;
+        rdfs:label             "No Light and No Land Anywhere" ;
+        poster:caption         "No Light and No Land Anywhere (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/no_light_and_no_land_anywhere_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/no_light_and_no_land_anywhere.jpg" ;
+        poster:title           "No Light and No Land Anywhere" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/No_Light_and_No_Land_Anywhere" .
+
+poster:No_manches_Frida
+        a                      poster:poster ;
+        rdfs:label             "No manches Frida" ;
+        poster:caption         "No manches Frida (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/no_manches_frida_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/no_manches_frida.jpg" ;
+        poster:title           "No manches Frida" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/No_manches_Frida" .
+
+poster:Loving  a               poster:poster ;
+        rdfs:label             "Loving" ;
+        poster:caption         "Loving (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/loving_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/loving.jpg" ;
+        poster:title           "Loving" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Loving" .
+
+poster:The_Adderall_Diaries
+        a                      poster:poster ;
+        rdfs:label             "The Adderall Diaries" ;
+        poster:caption         "The Adderall Diaries (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/adderall_diaries_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/adderall_diaries.jpg" ;
+        poster:title           "The Adderall Diaries" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Adderall_Diaries" .
+
+poster:The_Eyes_of_My_Mother
+        a                      poster:poster ;
+        rdfs:label             "The Eyes of My Mother" ;
+        poster:caption         "The Eyes of My Mother (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/eyes_of_my_mother_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/eyes_of_my_mother.jpg" ;
+        poster:title           "The Eyes of My Mother" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Eyes_of_My_Mother" .
+
+poster:Avas_Possessions
+        a                      poster:poster ;
+        rdfs:label             "Ava's Possessions" ;
+        poster:caption         "Ava's Possessions (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/avas_possessions_xlg.jpg" , "http://www.impawards.com/2016/posters/avas_possessions_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/avas_possessions.jpg" , "http://www.impawards.com/2016/posters/avas_possessions_ver2.jpg" ;
+        poster:title           "Ava's Possessions" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ava%27s_Possessions" .
+
+poster:The_Eagle_Huntress
+        a                      poster:poster ;
+        rdfs:label             "The Eagle Huntress" ;
+        poster:caption         "The Eagle Huntress (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/eagle_huntress_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/eagle_huntress.jpg" ;
+        poster:title           "The Eagle Huntress" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Eagle_Huntress" .
+
+poster:Pandemic  a             poster:poster ;
+        rdfs:label             "Pandemic" ;
+        poster:caption         "Pandemic (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/pandemic_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/pandemic.jpg" ;
+        poster:title           "Pandemic" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Pandemic" .
+
+<http://uib.no/info310/movieOntology#Nuts!>
+        a                      poster:poster ;
+        rdfs:label             "Nuts!" ;
+        poster:caption         "Nuts! (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/nuts_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/nuts.jpg" ;
+        poster:title           "Nuts!" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Nuts%21" .
+
+poster:The_Jungle_Book
+        a                      poster:poster ;
+        rdfs:label             "The Jungle Book" ;
+        poster:caption         "The Jungle Book (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/jungle_book_ver23_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/jungle_book_ver23.jpg" , "http://www.impawards.com/2016/posters/jungle_book_ver21.jpg" , "http://www.impawards.com/2016/posters/jungle_book_ver22.jpg" ;
+        poster:title           "The Jungle Book" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Jungle_Book" .
+
+poster:year  a       owl:DatatypeProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:integer .
+
+poster:No_Stranger_Than_Love
+        a                      poster:poster ;
+        rdfs:label             "No Stranger Than Love" ;
+        poster:caption         "No Stranger Than Love (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/no_stranger_than_love_xlg.jpg" , "http://www.impawards.com/2016/posters/no_stranger_than_love_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/no_stranger_than_love.jpg" , "http://www.impawards.com/2016/posters/no_stranger_than_love_ver2.jpg" ;
+        poster:title           "No Stranger Than Love" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/No_Stranger_Than_Love" .
+
+poster:Caged_No_More  a        poster:poster ;
+        rdfs:label             "Caged No More" ;
+        poster:caption         "Caged No More (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/caged_no_more_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/caged_no_more.jpg" ;
+        poster:title           "Caged No More" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Caged_No_More" .
+
+poster:My_Dead_Boyfriend
+        a                 poster:poster ;
+        rdfs:label        "My Dead Boyfriend" ;
+        poster:caption    "My Dead Boyfriend (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/my_dead_boyfriend.jpg" ;
+        poster:title      "My Dead Boyfriend" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/My_Dead_Boyfriend" .
+
+poster:Danny_Says  a      poster:poster ;
+        rdfs:label        "Danny Says" ;
+        poster:caption    "Danny Says (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/danny_says.jpg" ;
+        poster:title      "Danny Says" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Danny_Says" .
+
+poster:Generation_Startup
+        a                 poster:poster ;
+        rdfs:label        "Generation Startup" ;
+        poster:caption    "Generation Startup (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/generation_startup.jpg" ;
+        poster:title      "Generation Startup" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Generation_Startup" .
+
+poster:Cyborg_X  a             poster:poster ;
+        rdfs:label             "Cyborg X" ;
+        poster:caption         "Cyborg X (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/cyborg_x_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/cyborg_x.jpg" ;
+        poster:title           "Cyborg X" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Cyborg_X" .
+
+poster:Eddie_the_Eagle
+        a                      poster:poster ;
+        rdfs:label             "Eddie the Eagle" ;
+        poster:caption         "Eddie the Eagle (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/eddie_the_eagle_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/eddie_the_eagle_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/eddie_the_eagle_ver2.jpg" , "http://www.impawards.com/2016/posters/eddie_the_eagle.jpg" ;
+        poster:title           "Eddie the Eagle" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Eddie_the_Eagle" .
+
+poster:Ace_the_Case  a         poster:poster ;
+        rdfs:label             "Ace the Case" ;
+        poster:caption         "Ace the Case (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/ace_the_case_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/ace_the_case.jpg" ;
+        poster:title           "Ace the Case" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Ace_the_Case" .
+
+poster:The_Duel  a             poster:poster ;
+        rdfs:label             "The Duel" ;
+        poster:caption         "The Duel (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/duel_xlg.jpg" , "http://www.impawards.com/2016/posters/duel_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/duel_ver2_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/duel_ver2.jpg" , "http://www.impawards.com/2016/posters/duel_ver3.jpg" , "http://www.impawards.com/2016/posters/duel.jpg" ;
+        poster:title           "The Duel" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Duel" .
+
+poster:caption  a    owl:DatatypeProperty , owl:FunctionalProperty ;
+        rdfs:domain  poster:poster ;
+        rdfs:range   xsd:string .
+
+poster:Dark_Night  a      poster:poster ;
+        rdfs:label        "Dark Night" ;
+        poster:caption    "Dark Night (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/dark_night.jpg" ;
+        poster:title      "Dark Night" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Dark_Night" .
+
+<http://uib.no/info310/movieOntology#The_Purge:_Election_Year>
+        a                      poster:poster ;
+        rdfs:label             "The Purge: Election Year" ;
+        poster:caption         "The Purge: Election Year (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/purge_election_year_ver9_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver8_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver11_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver6_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver10_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver7_xlg.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver12_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/purge_election_year_ver10.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver8.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver9.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver11.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver7.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver12.jpg" , "http://www.impawards.com/2016/posters/purge_election_year_ver6.jpg" ;
+        poster:title           "The Purge: Election Year" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Purge%3A_Election_Year" .
+
+poster:Dont_Think_Twice
+        a                      poster:poster ;
+        rdfs:label             "Don't Think Twice" ;
+        poster:caption         "Don't Think Twice (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/dont_think_twice_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/dont_think_twice.jpg" ;
+        poster:title           "Don't Think Twice" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Don%27t_Think_Twice" .
+
+poster:The_Hurt_Business
+        a                 poster:poster ;
+        rdfs:label        "The Hurt Business" ;
+        poster:caption    "The Hurt Business (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/hurt_business.jpg" ;
+        poster:title      "The Hurt Business" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/The_Hurt_Business" .
+
+poster:The_Bye_Bye_Man
+        a                      poster:poster ;
+        rdfs:label             "The Bye Bye Man" ;
+        poster:caption         "The Bye Bye Man (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/bye_bye_man_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/bye_bye_man.jpg" ;
+        poster:title           "The Bye Bye Man" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/The_Bye_Bye_Man" .
+
+poster:Game_of_Aces  a         poster:poster ;
+        rdfs:label             "Game of Aces" ;
+        poster:caption         "Game of Aces (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/game_of_aces_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/game_of_aces.jpg" ;
+        poster:title           "Game of Aces" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Game_of_Aces" .
+
+poster:Its_Already_Tomorrow_in_Hong_Kong
+        a                      poster:poster ;
+        rdfs:label             "It's Already Tomorrow in Hong Kong" ;
+        poster:caption         "It's Already Tomorrow in Hong Kong (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/its_already_tomorrow_in_hong_kong_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/its_already_tomorrow_in_hong_kong_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/its_already_tomorrow_in_hong_kong.jpg" , "http://www.impawards.com/2016/posters/its_already_tomorrow_in_hong_kong_ver2.jpg" ;
+        poster:title           "It's Already Tomorrow in Hong Kong" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/It%27s_Already_Tomorrow_in_Hong_Kong" .
+
+poster:Deadpool  a             poster:poster ;
+        rdfs:label             "Deadpool" ;
+        poster:caption         "Deadpool (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/deadpool_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/deadpool_xlg.jpg" , "http://www.impawards.com/2016/posters/deadpool_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/deadpool_ver3.jpg" , "http://www.impawards.com/2016/posters/deadpool.jpg" , "http://www.impawards.com/2016/posters/deadpool_ver2.jpg" ;
+        poster:title           "Deadpool" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Deadpool" .
+
+poster:Genius  a               poster:poster ;
+        rdfs:label             "Genius" ;
+        poster:caption         "Genius (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/genius_ver3_xlg.jpg" , "http://www.impawards.com/2016/posters/genius_ver2_xlg.jpg" , "http://www.impawards.com/2016/posters/genius_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/genius_ver2.jpg" , "http://www.impawards.com/2016/posters/genius_ver3.jpg" , "http://www.impawards.com/2016/posters/genius.jpg" ;
+        poster:title           "Genius" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Genius" .
+
+poster:Family_Possessions
+        a                 poster:poster ;
+        rdfs:label        "Family Possessions" ;
+        poster:caption    "Family Possessions (2016)" ;
+        poster:posterUrl  "http://www.impawards.com/2016/posters/family_possessions.jpg" ;
+        poster:title      "Family Possessions" ;
+        poster:year       "2016"^^xsd:int ;
+        owl:sameAs        "http://dbpedia.org/resource/Family_Possessions" .
+
+<http://uib.no/info310/movieOntology#Pelé:_Birth_of_a_Legend>
+        a                      poster:poster ;
+        rdfs:label             "Pelé: Birth of a Legend" ;
+        poster:caption         "Pelé: Birth of a Legend (2016)" ;
+        poster:largePosterUrl  "http://www.impawards.com/2016/posters/pele_ver3_xlg.jpg" ;
+        poster:posterUrl       "http://www.impawards.com/2016/posters/pele_ver3.jpg" , "http://www.impawards.com/2016/posters/pele_ver2.jpg" , "http://www.impawards.com/2016/posters/pele.jpg" ;
+        poster:title           "Pelé: Birth of a Legend" ;
+        poster:year            "2016"^^xsd:int ;
+        owl:sameAs             "http://dbpedia.org/resource/Pel%C3%A9%3A_Birth_of_a_Legend" .
