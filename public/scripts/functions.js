@@ -5,7 +5,7 @@ const prefixes = ["prefix poster: <http://uib.no/info310/movieOntology#> ",
 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ",
 "prefix dbpedia: <http://dbpedia.org/resource/>"].join(" ");
 
-const queryEndpoint = "http://localhost:3030/ds/?query=";
+const queryEndpoint = "http://localhost:8080/ds/?query=";
 const format = "&format=json";
 // var countryNameUrl = endpoint + "?query=" + encodeURIComponent(countryNameQuery) + "&format=json";
 
@@ -82,8 +82,7 @@ $(function() {
             var $tableBody = $(".multipleHitTable tbody");
             $.each(multipleHits, function(index, val) {
                  /* iterate through array or object */
-                 console.log(val);
-                 $tableBody.append("<tr>"
+                 $tableBody.append("<tr data-posterName=\"" + val.name.value + "\">"
                                 + "<td>" + val.name.value + "</td>"
                                 + "<td>" + val.caption.value + "</td>"
                                 + "<td>" + val.year.value + "</td>"
