@@ -44,6 +44,7 @@ $(function() {
                                                 + " FILTER(strStarts(?name, \"" + search + "\"))} "
                                                 + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
+                    console.log(nameQueryUrl);
                     $.get(nameQueryUrl, function(data) {
                         if(data.results.bindings.length > 0) {
                             app.showMultipleHitList(data.results.bindings);
@@ -82,7 +83,7 @@ $(function() {
             var $tableBody = $(".multipleHitTable tbody");
             $.each(multipleHits, function(index, val) {
                  /* iterate through array or object */
-                 $tableBody.append("<tr data-posterName=\"" + val.name.value + "\">"
+                 $tableBody.append("<tr data-postername=\"" + val.name.value + "\">"
                                 + "<td>" + val.name.value + "</td>"
                                 + "<td>" + val.caption.value + "</td>"
                                 + "<td>" + val.year.value + "</td>"
@@ -123,7 +124,9 @@ $(function() {
     function addClickEventsToTableRows() {
         $("tbody tr").on('click', function(event) {
             event.preventDefault();
-            alert("Hello");
+            const posterName = $(this).data('postername');
+            var posterQuery = prefixes
+                            + ""
         });
     }
 });
