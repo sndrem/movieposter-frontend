@@ -1,8 +1,9 @@
 // Prefixes for the Sparql queries
-const prefixes = ["prefix poster: <http://uib.no/info310/movieOntology#> ",
+const prefixes = ["prefix poster: <http://uib.no/info310/posterOntology#> ",
 "prefix owl: <http://www.w3.org/2002/07/owl#> ",
 "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ",
 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ",
+"prefix dbpediaOntology: <http://dbpedia.org/ontology/>",
 "prefix dbpedia: <http://dbpedia.org/resource/>"].join(" ");
 
 const queryEndpoint = "http://localhost:8080/ds/?query=";
@@ -35,7 +36,7 @@ $(function() {
                     // Search is not empty, proceed to check for data in the triple store
                     var nameQuery = prefixes
                                   + "SELECT ?name ?year ?url ?caption "
-                                  + "WHERE { ?poster a poster:poster; "
+                                  + "WHERE { ?poster a poster:Poster; "
                                                 + " poster:title ?name; "
                                                 + " rdfs:label ?name; "
                                                 + " poster:year ?year; "
@@ -44,8 +45,8 @@ $(function() {
                                                 + " FILTER(strStarts(?name, \"" + search + "\"))} "
                                                 + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
-                    console.log(nameQueryUrl);
                     $.get(nameQueryUrl, function(data) {
+                        console.log(data);
                         if(data.results.bindings.length > 0) {
                             app.showMultipleHitList(data.results.bindings);
                             addClickEventsToTableRows();
@@ -126,7 +127,27 @@ $(function() {
             event.preventDefault();
             const posterName = $(this).data('postername');
             var posterQuery = prefixes
-                            + ""
+                            + "SELECT ?name ?url ?caption ?actors ?poster ?abstract ?dbpediaUrl "
+                            + "WHERE { "
+                            + "?poster a dbpediaOntology:Film; "
+                            + "        a poster:Poster; "
+                            + "        poster:title \"" + posterName + "\"; "
+                            + "        poster:posterUrl ?url; " 
+                            + "        poster:caption ?caption; "
+                            + "        owl:sameAs ?dbpediaUrl . "
+                            + " OPTIONAL { "
+                            + "     SERVICE <http://dbpedia.org/sparql/> { "
+                            + "             ?dbpediaUrl a dbpediaOntology:Film; "
+                            + "             dbpediaOntology:abstract ?abstract . "
+                            + " } "
+                            + " filter (langMatches(lang(?abstract), \"EN\")) "
+                            + "}} ";
+
+
+            var posterQueryUrl = queryEndpoint + encodeURIComponent(posterQuery) + format;
+            $.get(posterQueryUrl, function(data) {
+                console.log(data);
+            });
         });
     }
 });

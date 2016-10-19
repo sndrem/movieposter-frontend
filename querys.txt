@@ -1,5 +1,5 @@
-// Skal hente data fra vår db + dbpedia
-prefix poster: <http://uib.no/info310/movieOntology#>
+# Skal hente data fra vår db + dbpedia
+prefix poster: <http://uib.no/info310/posterOntology#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -7,23 +7,24 @@ prefix dbpedia: <http://dbpedia.org/resource/>
 prefix dbpediaOntology: <http://dbpedia.org/ontology/>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-SELECT ?name ?url ?type ?actors
+SELECT ?name ?url ?caption ?actors ?poster ?abstract ?dbpediaUrl
 WHERE {
-  ?poster a poster:poster;
+  ?poster a dbpediaOntology:Film;
+          a poster:Poster;
+          poster:title "Dallas Buyers Club";
           poster:posterUrl ?url;
-          poster:title ?name;
-          poster:title "Bachelorette" .
-  
-   optional {
+          poster:caption ?caption;
+          owl:sameAs ?dbpediaUrl .
+
+  optional {
     SERVICE <http://dbpedia.org/sparql/> {
-      ?x owl:sameAs <http://yago-knowledge.org/resource/Pearl_Harbour_(film)>;
-         dbpediaOntology:abstract ?type;
-         dbpediaOntology:starring ?actors .
+      ?dbpediaUrl dbpediaOntology:abstract ?abstract .
     }
-    filter (langMatches(lang(?type), "EN"))
-  }
-  
+    filter (langMatches(lang(?abstract), "EN"))
+  } 
 }
 
 limit 20
+
+
 
