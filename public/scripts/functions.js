@@ -11,19 +11,19 @@ const format = "&format=json";
 // var countryNameUrl = endpoint + "?query=" + encodeURIComponent(countryNameQuery) + "&format=json";
 
 
-function Poster(title, caption, year, urls, largePosterUrl) {
+function Poster(title, caption, year, urls, largePosterUrl, abstract) {
     this.title = title;
     this.caption = caption;
     this.year = year;
     this.urls = urls;
     this.largePosterUrl = largePosterUrl;
+    this.abstract = abstract;
 }
 
 $(function() {
     var app = {
         searchBtnClick: function() {
             $("#searchBtn").on('click', function(event) {
-                $(".col-xs-12").html("");
                 event.preventDefault();
                 // Store value of search from input field
                 var search = $("#nameSearch").val();
@@ -33,6 +33,7 @@ $(function() {
                     // Search is empty, render message to user
                     $("legend").html("Search cannot be empty");
                 } else {
+                    $(".multipleHitTable tbody").html("");
                     // Search is not empty, proceed to check for data in the triple store
                     var nameQuery = prefixes
                                   + "SELECT ?name ?year ?url ?caption "
@@ -65,14 +66,22 @@ $(function() {
                 $("legend").html("No results for " + $("#nameSearch").val());
             } else if (results.length > 0) {
                 const posterData = results[0];
+                console.log("Poster data: ", posterData);
                 const title = posterData.name.value;
                 const caption = posterData.caption.value;
                 const posterUrls = getPosterUrls(results);
                 const year = posterData.year.value;
-                poster = new Poster(title, caption, year, posterUrls, null);
+                var abstract = null;
+                try {
+                    abstract = posterData.abstract.value;
+                } catch(error) {
+                    console.log(error);
+                    console.log("No abstract for " + title);
+                }
+                poster = new Poster(title, caption, year, posterUrls, null, abstract);
 
                 appendImages(poster.urls);
-                $(".posterData").append("<h1>" + caption + "</h1>")
+                $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract + "</p>")
             }
         },
 
@@ -127,12 +136,14 @@ $(function() {
             event.preventDefault();
             const posterName = $(this).data('postername');
             var posterQuery = prefixes
-                            + "SELECT ?name ?url ?caption ?actors ?poster ?abstract ?dbpediaUrl "
+                            + "SELECT ?name ?url ?year ?caption ?actors ?poster ?abstract ?dbpediaUrl "
                             + "WHERE { "
                             + "?poster a dbpediaOntology:Film; "
                             + "        a poster:Poster; "
                             + "        poster:title \"" + posterName + "\"; "
+                            + "        poster:title ?name; " 
                             + "        poster:posterUrl ?url; " 
+                            + "        poster:year ?year; " 
                             + "        poster:caption ?caption; "
                             + "        owl:sameAs ?dbpediaUrl . "
                             + " OPTIONAL { "
@@ -147,6 +158,7 @@ $(function() {
             var posterQueryUrl = queryEndpoint + encodeURIComponent(posterQuery) + format;
             $.get(posterQueryUrl, function(data) {
                 console.log(data);
+                app.populateData(data);
             });
         });
     }
