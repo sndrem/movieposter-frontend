@@ -5,6 +5,7 @@ const prefixes = ["prefix poster: <http://uib.no/info310/posterOntology#> ",
 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ",
 "prefix dbpediaOntology: <http://dbpedia.org/ontology/>",
 "prefix dbpediaProp: <http://dbpedia.org/property/>",
+"prefix prov: <http://www.w3.org/ns/prov#>",
 "prefix dbpedia: <http://dbpedia.org/resource/>"].join(" ");
 
 const queryEndpoint = "http://localhost:8080/ds/?query=";
@@ -47,7 +48,6 @@ $(function() {
                                                 + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
                     $.get(nameQueryUrl, function(data) {
-                        console.log(data);
                         if(data.results.bindings.length == 1) {
                             const posterName = data.results.bindings[0].name.value;
                             getDbpediaPosterData(posterName);
@@ -55,7 +55,6 @@ $(function() {
                             app.showMultipleHitList(data.results.bindings);
                             addClickEventsToTableRows();
                         }
-                        // app.populateData(data);
                         /*optional stuff to do after success */
                     });
 
@@ -65,6 +64,7 @@ $(function() {
         populateData: function(data) {
             var results = data.results.bindings;
             var poster = null;
+            $(".posterStats").html("");
             if(results.length == 0) {
                 $("legend").html("No results for " + $("#nameSearch").val());
             } else if (results.length > 0) {
@@ -72,18 +72,22 @@ $(function() {
                 const title = posterData.name.value;
                 const caption = posterData.caption.value;
                 const year = posterData.year.value;
-                var abstract = null;
+                var abstract, director, actors, budget = null;
                 try {
                     abstract = posterData.abstract.value;
+                    director = posterData.directorName.value;
+                    actors = getActors(results);
                 } catch(error) {
-                    console.log(error);
-                    console.log("No abstract for " + title);
                     abstract = "No abstract available";
                 }
                 poster = new Poster(title, caption, year, null, null, abstract);
 
                 $(".posterData").html("");
-                $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract  + "</p>")
+                $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract  + "</p>");
+                $(".posterStats").append("<h3>Actors</h3><ul></ul>");
+                $.each(actors, function(index, element) {
+                    $("ul").append(element);
+                });
             }
         },
 
@@ -108,6 +112,20 @@ $(function() {
 
     // Helper methods
 
+    // Method for fetching the names of all the actors and returning them as a ul element
+    function getActors(actorList) {
+        if(actorList && actorList.length > 0) {
+            console.log("Actor list", actorList);
+            var listElements =  $.map(actorList, function(item, index) {
+                return "<li><a href=\"" + item.actorWikiPage.value + "\">" + item.actorName.value + "</a></li>";
+            });
+            return listElements;
+        } else {
+            throw "No actors present";
+        }
+    }
+
+
     // Method to append all image urls to the site
     function appendImages(posterUrls) {
         if(posterUrls) {
@@ -129,12 +147,11 @@ $(function() {
     // Returns a thumbnail html element with appropriate bootstrap classes
     function createBootstrapThumbnail(posterUrl, altText) {
         var imageTag = createImageTag(posterUrl, altText);
-        return "<div class='col-xs-12 col-sm-8 col-md-8 col-lg-6'><a class='' href=\"" + posterUrl + "\">" + imageTag + " </a></div>";
+        return "<div class='col-xs-12 col-sm-8 col-md-8 col-lg-6'><a href=\"" + posterUrl + "\">" + imageTag + " </a></div>";
     }
 
     // Fetches all urls for a given poster
     function getPosterUrls(posterData) {
-        console.log("Getting poster urls", posterData);
         if(posterData) {
             var urls = [];
             for(var i = 0; i < posterData.length; i++) {
@@ -146,7 +163,7 @@ $(function() {
 
     function getDbpediaPosterData(posterName) {
         var posterQuery = prefixes
-                            + "SELECT distinct ?name ?year ?caption ?poster ?abstract ?dbpediaUrl ?budget ?actorName ?directorName "
+                            + "SELECT distinct ?name ?year ?caption ?poster ?abstract ?dbpediaUrl ?budget ?actorName ?directorName ?actorWikiPage "
                             + "WHERE { "
                             + "?poster a dbpediaOntology:Film; "
                             + "        a poster:Poster; "
@@ -164,6 +181,7 @@ $(function() {
                             + " dbpediaProp:budget ?budget; "
                             + " dbpediaOntology:director ?director . "
                             + " ?actors rdfs:label ?actorName . "
+                            + " ?actors prov:wasDerivedFrom ?actorWikiPage . "
                             + " ?director rdfs:label ?directorName . "
                             + " }} "
                             + " FILTER (langMatches(lang(?abstract), \"EN\")) "
@@ -173,7 +191,6 @@ $(function() {
 
             var posterQueryUrl = queryEndpoint + encodeURIComponent(posterQuery) + format;
             $.get(posterQueryUrl, function(data) {
-                console.log(data);
                 app.populateData(data);
             });
 
@@ -186,7 +203,6 @@ $(function() {
                         + "}"
             var urlQueryUrl = queryEndpoint + encodeURIComponent(urlQuery) + format;
             $.get(urlQueryUrl, function(data) {
-                console.log(data);
                 const urls = getPosterUrls(data.results.bindings);
                 appendImages(urls);
             });
