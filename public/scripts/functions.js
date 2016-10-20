@@ -65,7 +65,6 @@ $(function() {
                 $("legend").html("No results for " + $("#nameSearch").val());
             } else if (results.length > 0) {
                 const posterData = results[0];
-                console.log("Poster data: ", posterData);
                 const title = posterData.name.value;
                 const caption = posterData.caption.value;
                 const year = posterData.year.value;
@@ -78,7 +77,6 @@ $(function() {
                 }
                 poster = new Poster(title, caption, year, null, null, abstract);
 
-                appendImages(poster.urls);
                 $(".posterData").html("");
                 $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract + "</p>")
             }
@@ -109,13 +107,13 @@ $(function() {
     function appendImages(posterUrls) {
         if(posterUrls) {
             var $imageSection = $(".posters");
+            $imageSection.html("");
             for(var i = 0; i < posterUrls.length; i++) {
                 var url = posterUrls[i];
                 var image = createImageTag(url, null);
                 $imageSection.append(image);
-            }    
+            }
         }
-        
     }
 
     // Returns an image tag
@@ -125,6 +123,7 @@ $(function() {
 
     // Fetches all urls for a given poster
     function getPosterUrls(posterData) {
+        console.log("Getting poster urls", posterData);
         if(posterData) {
             var urls = [];
             for(var i = 0; i < posterData.length; i++) {
@@ -160,8 +159,21 @@ $(function() {
 
             var posterQueryUrl = queryEndpoint + encodeURIComponent(posterQuery) + format;
             $.get(posterQueryUrl, function(data) {
-                console.log(data);
                 app.populateData(data);
+            });
+
+            var urlQuery = prefixes
+                        + "SELECT ?url "
+                        + "WHERE { "
+                        + "?poster a poster:Poster; "
+                        + "         poster:posterUrl ?url; "
+                        + "         poster:title " + JSON.stringify(posterName) + " "
+                        + "}"
+            var urlQueryUrl = queryEndpoint + encodeURIComponent(urlQuery) + format;
+            $.get(urlQueryUrl, function(data) {
+                console.log(data);
+                const urls = getPosterUrls(data.results.bindings);
+                appendImages(urls);
             });
         });
     }
