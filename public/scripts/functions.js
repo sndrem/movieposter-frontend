@@ -4,6 +4,7 @@ const prefixes = ["prefix poster: <http://uib.no/info310/posterOntology#> ",
 "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ",
 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ",
 "prefix dbpediaOntology: <http://dbpedia.org/ontology/>",
+"prefix dbpediaProp: <http://dbpedia.org/property/>",
 "prefix dbpedia: <http://dbpedia.org/resource/>"].join(" ");
 
 const queryEndpoint = "http://localhost:8080/ds/?query=";
@@ -42,12 +43,15 @@ $(function() {
                                                 + " rdfs:label ?name; "
                                                 + " poster:year ?year; "
                                                 + " poster:caption ?caption . "
-                                                + " FILTER(strStarts(?name, \"" + search + "\"))} "
+                                                + " FILTER(contains(?name, \"" + search + "\"))} "
                                                 + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
                     $.get(nameQueryUrl, function(data) {
                         console.log(data);
-                        if(data.results.bindings.length > 0) {
+                        if(data.results.bindings.length == 1) {
+                            const posterName = data.results.bindings[0].name.value;
+                            getDbpediaPosterData(posterName);
+                        } else if(data.results.bindings.length > 1) {
                             app.showMultipleHitList(data.results.bindings);
                             addClickEventsToTableRows();
                         }
@@ -108,10 +112,10 @@ $(function() {
     function appendImages(posterUrls) {
         if(posterUrls) {
             var $imageSection = $(".posters");
-            $imageSection.html("");
+            $imageSection.html("<h2>Movie Poster(s)</h2>");
             for(var i = 0; i < posterUrls.length; i++) {
                 var url = posterUrls[i];
-                var image = createImageTag(url, null);
+                var image = createBootstrapThumbnail(url, null);
                 $imageSection.append(image);
             }
         }
@@ -120,6 +124,12 @@ $(function() {
     // Returns an image tag
     function createImageTag(posterUrl, altText) {
         return "<img class='img-responsive' src=\"" + posterUrl + "\" alt=\"" + altText + "\">";;
+    }
+
+    // Returns a thumbnail html element with appropriate bootstrap classes
+    function createBootstrapThumbnail(posterUrl, altText) {
+        var imageTag = createImageTag(posterUrl, altText);
+        return "<div class='col-xs-12 col-sm-8 col-md-8 col-lg-6'><a class='' href=\"" + posterUrl + "\">" + imageTag + " </a></div>";
     }
 
     // Fetches all urls for a given poster
@@ -134,12 +144,9 @@ $(function() {
         }
     }
 
-    function addClickEventsToTableRows() {
-        $("tbody tr").on('click', function(event) {
-            event.preventDefault();
-            const posterName = $(this).data('postername');
-            var posterQuery = prefixes
-                            + "SELECT distinct ?name ?year ?caption ?actors ?poster ?abstract ?dbpediaUrl "
+    function getDbpediaPosterData(posterName) {
+        var posterQuery = prefixes
+                            + "SELECT distinct ?name ?year ?caption ?poster ?abstract ?dbpediaUrl ?budget ?actorName ?directorName "
                             + "WHERE { "
                             + "?poster a dbpediaOntology:Film; "
                             + "        a poster:Poster; "
@@ -149,16 +156,24 @@ $(function() {
                             + "        poster:caption ?caption; "
                             + "        owl:sameAs ?dbpediaUrl . "
                             + " OPTIONAL { "
-                            + "     SERVICE <http://dbpedia.org/sparql/> { "
-                            + "             ?dbpediaUrl a dbpediaOntology:Film; "
-                            + "             dbpediaOntology:abstract ?abstract . "
-                            + " } "
-                            + " filter (langMatches(lang(?abstract), \"EN\")) "
-                            + "}} ";
-
+                            + " SERVICE <http://dbpedia.org/sparql/> { "
+                            + " ?dbpediaUrl a dbpediaOntology:Film; "
+                            + " dbpediaOntology:abstract ?abstract . "
+                            + " OPTIONAL { "
+                            + " ?dbpediaUrl dbpediaOntology:starring ?actors; "
+                            + " dbpediaProp:budget ?budget; "
+                            + " dbpediaOntology:director ?director . "
+                            + " ?actors rdfs:label ?actorName . "
+                            + " ?director rdfs:label ?directorName . "
+                            + " }} "
+                            + " FILTER (langMatches(lang(?abstract), \"EN\")) "
+                            + " FILTER (langMatches(lang(?actorName), \"EN\")) "
+                            + " FILTER (langMatches(lang(?directorName), \"EN\")) "
+                            + " }}";
 
             var posterQueryUrl = queryEndpoint + encodeURIComponent(posterQuery) + format;
             $.get(posterQueryUrl, function(data) {
+                console.log(data);
                 app.populateData(data);
             });
 
@@ -175,6 +190,13 @@ $(function() {
                 const urls = getPosterUrls(data.results.bindings);
                 appendImages(urls);
             });
+    }
+
+    function addClickEventsToTableRows() {
+        $("tbody tr").on('click', function(event) {
+            event.preventDefault();
+            const posterName = $(this).data('postername');
+            getDbpediaPosterData(posterName);
         });
     }
 });

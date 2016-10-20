@@ -5,4 +5,7 @@ tr:hover {
   cursor: pointer;
   height: 10%; }
 
+.thumbnail img {
+  width: 40%; }
+
 /*# sourceMappingURL=style.css.map */

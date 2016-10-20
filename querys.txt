@@ -26,6 +26,25 @@ WHERE {
 
 limit 1
 
+# Skal hente url for en gitt film
+prefix poster: <http://uib.no/info310/posterOntology#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix dbpedia: <http://dbpedia.org/resource/>
+prefix dbpediaOntology: <http://dbpedia.org/ontology/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?url 
+WHERE {
+  ?poster a dbpediaOntology:Film;
+          a poster:Poster;
+          poster:title <movie name>;
+          poster:posterUrl ?url .
+}
+order by ?url
+
+
 
 
 
