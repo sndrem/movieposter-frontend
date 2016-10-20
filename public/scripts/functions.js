@@ -36,13 +36,12 @@ $(function() {
                     $(".multipleHitTable tbody").html("");
                     // Search is not empty, proceed to check for data in the triple store
                     var nameQuery = prefixes
-                                  + "SELECT ?name ?year ?url ?caption "
+                                  + "SELECT DISTINCT ?name ?year ?caption "
                                   + "WHERE { ?poster a poster:Poster; "
                                                 + " poster:title ?name; "
                                                 + " rdfs:label ?name; "
                                                 + " poster:year ?year; "
-                                                + " poster:caption ?caption; "
-                                                + " poster:posterUrl ?url . "
+                                                + " poster:caption ?caption . "
                                                 + " FILTER(strStarts(?name, \"" + search + "\"))} "
                                                 + " ORDER BY DESC(?year) ";
                     var nameQueryUrl = queryEndpoint + encodeURIComponent(nameQuery) + format;
@@ -69,7 +68,6 @@ $(function() {
                 console.log("Poster data: ", posterData);
                 const title = posterData.name.value;
                 const caption = posterData.caption.value;
-                const posterUrls = getPosterUrls(results);
                 const year = posterData.year.value;
                 var abstract = null;
                 try {
@@ -78,9 +76,10 @@ $(function() {
                     console.log(error);
                     console.log("No abstract for " + title);
                 }
-                poster = new Poster(title, caption, year, posterUrls, null, abstract);
+                poster = new Poster(title, caption, year, null, null, abstract);
 
                 appendImages(poster.urls);
+                $(".posterData").html("");
                 $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract + "</p>")
             }
         },
@@ -97,7 +96,6 @@ $(function() {
                                 + "<td>" + val.name.value + "</td>"
                                 + "<td>" + val.caption.value + "</td>"
                                 + "<td>" + val.year.value + "</td>"
-                                + "<td><a href=\"" + val.url.value + "\">" + val.url.value + "</a></td>"
                                 + "</tr>");
             });
         }
@@ -109,12 +107,15 @@ $(function() {
 
     // Method to append all image urls to the site
     function appendImages(posterUrls) {
-        var $imageSection = $(".posters");
-        for(var i = 0; i < posterUrls.length; i++) {
-            var url = posterUrls[i];
-            var image = createImageTag(url, null);
-            $imageSection.append(image);
+        if(posterUrls) {
+            var $imageSection = $(".posters");
+            for(var i = 0; i < posterUrls.length; i++) {
+                var url = posterUrls[i];
+                var image = createImageTag(url, null);
+                $imageSection.append(image);
+            }    
         }
+        
     }
 
     // Returns an image tag
@@ -124,11 +125,14 @@ $(function() {
 
     // Fetches all urls for a given poster
     function getPosterUrls(posterData) {
-        var urls = [];
-        for(var i = 0; i < posterData.length; i++) {
-            urls.push(posterData[i].url.value);
+        if(posterData) {
+            var urls = [];
+            for(var i = 0; i < posterData.length; i++) {
+                urls.push(posterData[i].url.value);
+            }
+            return urls;    
         }
-        return urls;
+        
     }
 
     function addClickEventsToTableRows() {
@@ -136,14 +140,13 @@ $(function() {
             event.preventDefault();
             const posterName = $(this).data('postername');
             var posterQuery = prefixes
-                            + "SELECT ?name ?url ?year ?caption ?actors ?poster ?abstract ?dbpediaUrl "
+                            + "SELECT distinct ?name ?year ?caption ?actors ?poster ?abstract ?dbpediaUrl "
                             + "WHERE { "
                             + "?poster a dbpediaOntology:Film; "
                             + "        a poster:Poster; "
                             + "        poster:title \"" + posterName + "\"; "
-                            + "        poster:title ?name; " 
-                            + "        poster:posterUrl ?url; " 
-                            + "        poster:year ?year; " 
+                            + "        poster:title ?name; "
+                            + "        poster:year ?year; "
                             + "        poster:caption ?caption; "
                             + "        owl:sameAs ?dbpediaUrl . "
                             + " OPTIONAL { "

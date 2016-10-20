@@ -7,24 +7,26 @@ prefix dbpedia: <http://dbpedia.org/resource/>
 prefix dbpediaOntology: <http://dbpedia.org/ontology/>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-SELECT ?name ?url ?caption ?actors ?poster ?abstract ?dbpediaUrl
+SELECT distinct ?name ?caption ?actors ?poster ?abstract ?dbpediaUrl
 WHERE {
   ?poster a dbpediaOntology:Film;
           a poster:Poster;
-          poster:title "Dallas Buyers Club";
-          poster:posterUrl ?url;
+          poster:title "Due Date";
           poster:caption ?caption;
           owl:sameAs ?dbpediaUrl .
 
   optional {
     SERVICE <http://dbpedia.org/sparql/> {
-      ?dbpediaUrl dbpediaOntology:abstract ?abstract .
+      ?dbpediaUrl a dbpediaOntology:Film;
+                dbpediaOntology:abstract ?abstract .
     }
     filter (langMatches(lang(?abstract), "EN"))
-  } 
+  }
 }
 
-limit 20
+limit 1
+
+
 
 
 
