@@ -74,11 +74,12 @@ $(function() {
                 } catch(error) {
                     console.log(error);
                     console.log("No abstract for " + title);
+                    abstract = "No abstract available";
                 }
                 poster = new Poster(title, caption, year, null, null, abstract);
 
                 $(".posterData").html("");
-                $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract + "</p>")
+                $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract  + "</p>")
             }
         },
 
@@ -129,9 +130,8 @@ $(function() {
             for(var i = 0; i < posterData.length; i++) {
                 urls.push(posterData[i].url.value);
             }
-            return urls;    
+            return urls;
         }
-        
     }
 
     function addClickEventsToTableRows() {
