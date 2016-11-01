@@ -86,7 +86,7 @@ $(function() {
                 $(".posterData").append("<h1>" + caption + "</h1><p>" + abstract  + "</p>");
                 $(".posterStats").append("<h3>Actors</h3><ul></ul>");
                 $.each(actors, function(index, element) {
-                    $("ul").append(element);
+                    $(".posterStats ul").append(element);
                 });
             }
         },
